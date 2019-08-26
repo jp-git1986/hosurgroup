@@ -1,0 +1,10 @@
+---
+- hosts: apache
+  sudo: yes
+  tasks:
+    - name: Install required system packages.
+      yum: pkg={{ item }} state=installed update-cache=yes
+      with_items:
+       - gcc
+       - git-core
+
