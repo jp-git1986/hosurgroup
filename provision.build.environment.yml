@@ -2,9 +2,6 @@
 - hosts: apache
   sudo: yes
   tasks:
-    - name: Install required system packages.
-      yum: pkg={{ item }} state=installed update-cache=yes
-      with_items:
-       - gcc
-       - git-core
+    - name: create file on tmp.
+      shell: touch /tmp/test_ansible.log 
 
