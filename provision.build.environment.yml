@@ -1,6 +1,5 @@
 ---
 - hosts: all
-  sudo: yes
   tasks:
     - name: create file on tmp.
       shell: touch /tmp/test_ansible.log 
