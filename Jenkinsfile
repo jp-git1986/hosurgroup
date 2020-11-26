@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('source') {
       steps {
-        sh 'echo testing pipelinejob'
+        sh 'echo testing pipeline'
       }
     }
 
