@@ -1,9 +1,9 @@
 pipeline {
-  agent any
+  agent { docker { image 'ubuntu:20.04lts' }}
   stages {
     stage('source') {
       steps {
-        sh 'echo testing pipelinejob'
+        sh 'echo testing pipeline'
       }
     }
 
@@ -20,9 +20,6 @@ pipeline {
             echo 'build in progress'
           }
         }
-
-      }
-    }
 
     stage('test') {
       steps {
