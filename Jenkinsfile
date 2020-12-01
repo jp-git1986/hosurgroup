@@ -41,8 +41,5 @@ pipeline {
         chuckNorris()
       }
     }
-
-  environment {
-    lifecycle = 'prod'
-  }
+      }
 }
