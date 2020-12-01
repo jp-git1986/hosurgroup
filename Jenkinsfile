@@ -8,10 +8,18 @@ pipeline {
     }
 
     stage('build') {
-      steps {
-        echo 'building step webhook attempt'
-      }
-    }
+      parallel {
+        stage('build') {
+          steps {
+            echo 'building step'
+          }
+        }
+
+        stage('buildstatus') {
+          steps {
+            echo 'build in progress'
+          }
+        }
 
     stage('test') {
       steps {
@@ -19,6 +27,18 @@ pipeline {
           sleep 5
         }
 
+      }
+    }
+
+    stage('deploy') {
+      steps {
+        echo 'deployment over'
+      }
+    }
+
+    stage('post section') {
+      steps {
+        chuckNorris()
       }
     }
 
