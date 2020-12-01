@@ -22,6 +22,12 @@ pipeline {
       }
     }
 
+    stage('deploy') {
+      steps {
+        echo 'deployment over'
+      }
+    }
+
   }
   environment {
     lifecycle = 'prod'
