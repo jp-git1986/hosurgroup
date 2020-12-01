@@ -9,7 +9,7 @@ pipeline {
 
     stage('build') {
       steps {
-        echo 'building step'>test.txt
+        echo 'building step'
       }
     }
 
