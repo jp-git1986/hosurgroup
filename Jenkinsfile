@@ -42,7 +42,6 @@ pipeline {
       }
     }
 
-  }
   environment {
     lifecycle = 'prod'
   }
