@@ -28,6 +28,12 @@ pipeline {
       }
     }
 
+    stage('post section') {
+      steps {
+        chuckNorris()
+      }
+    }
+
   }
   environment {
     lifecycle = 'prod'
