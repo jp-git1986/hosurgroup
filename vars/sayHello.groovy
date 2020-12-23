@@ -1,5 +1,5 @@
 def call(name) {
 node () {
-echo string.format("Hello ${name}")
+echo String.format("Hello ${name}")
 }
 }
