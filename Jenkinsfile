@@ -1,5 +1,5 @@
 pipeline {
-  agent { docker { image 'ubuntu:20.04lts' }}
+  agent { docker { image 'centos:latest' }}
   stages {
     stage('source') {
       steps {
