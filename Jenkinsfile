@@ -1,35 +1,10 @@
 pipeline {
-  agent any
+  agent { docker { image 'centos:latest' }}
   stages {
     stage('source') {
       steps {
-        sh 'echo testing pipelinejob'
+        sh 'echo testing pipeline'
       }
     }
-
-    stage('build') {
-      steps {
-        echo 'building step'
-      }
-    }
-
-    stage('test') {
-      steps {
-        timestamps() {
-          sleep 5
-        }
-
-      }
-    }
-
-    stage('deploy') {
-      steps {
-        echo 'deployment over'
-      }
-    }
-
-  }
-  environment {
-    lifecycle = 'prod'
   }
 }
