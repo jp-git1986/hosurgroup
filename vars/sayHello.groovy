@@ -10,7 +10,7 @@ def call(body) {
         { 
             node
   		{
-  			label "${slaveName}"
+  			label "${params.slaveName}"
   		}
         }
         stages {
