@@ -34,7 +34,7 @@ def call(body) {
                 sh "echo ${var1}"
                 sh "echo ${var2}"
                 sh "echo ${params.appVersion}"
-                sh "echo"${params.hostIp}"
+                sh "echo ${params.hostIp}"
             }
     }
         }
