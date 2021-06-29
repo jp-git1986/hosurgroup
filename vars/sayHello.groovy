@@ -18,9 +18,12 @@ def call(body) {
     steps {
         // Use a script block to do custom scripting
         script {
-            def props = readProperties file: 'extravars.properties' 
-            env.var1 = props.var1
-            env.var2 = props.var2
+          //  def props = readProperties file: 'extravars.properties'
+         //   script {
+  readProperties(file: extravars.properties).each {key, value -> env[key] = value }
+//}
+        //    env.var1 = props.var1
+        //    env.var2 = props.var2
         }
         echo "The variable 1 value  is $var1"
         echo "The variable 2 value  is $var2"
