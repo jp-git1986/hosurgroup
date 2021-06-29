@@ -1,6 +1,6 @@
 //@Library('ecom-app-lib') _
 
-@Library('shared-test') _
+//@Library('shared-test') _
 properties( [
     parameters([
         choice(choices: ['10.80.66.171','10.80.67.6','10.80.67.200'], description: 'Select a host to be delpoyed', name: 'host')
