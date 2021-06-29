@@ -1,7 +1,5 @@
 //@Library('ecom-app-lib') _
 
-#!groovy
-
 @Library('shared-test') _
 properties( [
     parameters([
