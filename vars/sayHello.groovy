@@ -33,6 +33,8 @@ def call(body) {
             steps {
                 sh "echo ${var1}"
                 sh "echo ${var2}"
+                sh "echo ${params.appVersion}"
+                sh "echo"${params.hostIp}"
             }
     }
         }
