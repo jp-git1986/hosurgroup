@@ -1,5 +1,6 @@
 //@Library('ecom-app-lib') _
-sayHello { 
+sayHello {
+  slaveName = 'master'
 //  var1 = 'jp'
 //  var2 = 'shiva'
 }
