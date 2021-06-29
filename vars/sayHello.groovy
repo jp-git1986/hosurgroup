@@ -36,6 +36,7 @@ def call(body) {
 					)]
   }
   }
+	  }
             stage("reading properties from properties file") {
     steps {
         // Use a script block to do custom scripting
