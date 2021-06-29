@@ -8,10 +8,22 @@ def call(body) {
     pipeline {
       agent any
         stages {
-          stage ('stage1') {
+            stage("reading properties from properties file") {
+    steps {
+        // Use a script block to do custom scripting
+        script {
+            def props = readProperties file: 'extravars.properties' 
+            env.var1 = props.var1
+            env.var2 = props.var2
+        }
+        echo "The variable 1 value  is $var1"
+        echo "The variable 2 value  is $var2"
+    }
+}
+          stage ('stage2') {
             steps {
-                sh "echo ${pipelineParams.var1}"
-                sh "echo ${pipelineParams.var2}"
+                sh "echo ${var1}"
+                sh "echo ${var2}"
             }
     }
         }
