@@ -1,4 +1,4 @@
-class jsparams implements Serializable {
+class jsParams implements Serializable {
   //
   static giveMeParameters (script) {
     return [
@@ -26,6 +26,15 @@ def call(body) {
   		}
         }
         stages {
+          stage('Setup parameters') {
+            steps {
+                script { 
+				properties (
+  parameters (
+    jsParams.giveMeParameters (this)
+  )
+  }
+  }
             stage("reading properties from properties file") {
     steps {
         // Use a script block to do custom scripting
