@@ -1,2 +1,2 @@
 @Library('ecom-app-lib') _
-sayHello 'jp'
+sayHello { var1 = 'jp',var2 = 'shiva' }
