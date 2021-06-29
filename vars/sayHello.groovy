@@ -6,7 +6,13 @@ def call(body) {
     body()
 
     pipeline {
-      agent any
+        agent 
+        { 
+            node
+  		{
+  			label "${slaveName}"
+  		}
+        }
         stages {
             stage("reading properties from properties file") {
     steps {
