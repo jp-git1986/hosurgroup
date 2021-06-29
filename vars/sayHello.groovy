@@ -29,10 +29,11 @@ def call(body) {
           stage('Setup parameters') {
             steps {
                 script { 
-				properties (
-  parameters (
+				properties [(
+  parameters [(
     jsParams.giveMeParameters (this)
-  )
+  )]
+					)]
   }
   }
             stage("reading properties from properties file") {
