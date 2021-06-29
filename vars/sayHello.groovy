@@ -10,8 +10,8 @@ def call(body) {
         stages {
           stage ('stage1') {
             steps {
-              sh 'echo pipelineParams.var1'
-              sh 'echo pipelineParams.var2'
+                sh 'echo ${pipelineParams.var1}'
+                sh 'echo ${pipelineParams.var2}'
             }
     }
         }
