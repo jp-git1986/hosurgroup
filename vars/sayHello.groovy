@@ -20,7 +20,7 @@ def call(body) {
         script {
           //  def props = readProperties file: 'extravars.properties'
          //   script {
-  readProperties(file: extravars.properties).each {key, value -> env[key] = value }
+  readProperties(file: 'extravars.properties').each {key, value -> env[key] = value }
 //}
         //    env.var1 = props.var1
         //    env.var2 = props.var2
